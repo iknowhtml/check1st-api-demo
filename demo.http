@@ -1,0 +1,41 @@
+@base_url=https://check1st.com/api/
+@project_name=Demo
+@scan_settings_id=5f2fc67b-2a23-416a-bc7b-53781eee8f4b
+@token=<TOKEN>
+
+###
+### https://check1st.com/api/<PROJECT_NAME>/scan-settings/scans
+POST {{base_url}}{{project_name}}/scan-settings/scans
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+token: Bearer {{token}}
+
+{
+  "scan_settings_id" : "{{scan_settings_id}}"
+}
+###
+### https://check1st.com/api/<PROJECT_NAME>/scan-settings/scan-state
+@scan_id=65435bc2-41da-4a81-a3ae-55ff5c72c465
+###
+POST {{base_url}}{{project_name}}/scan-settings/scan-state
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+token: Bearer {{token}}
+
+{
+  "scan_id" : "{{scan_id}}"
+}
+###
+### https://check1st.com/api/<PROJECT_NAME>/scan-settings/scans/<SCAN_ID>
+POST {{base_url}}{{project_name}}/scan-settings/scans/{{scan_id}}
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+token: Bearer {{token}}
+
+{
+
+}
+###
